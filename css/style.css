@@ -18,16 +18,38 @@ header {
     background-color: black;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 50px 0;
     height: 100px;
 }
 
 .logo {
     color: red;
+    text-transform: uppercase;
+}
+
+.input-bottom input {
+    border: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 999px;
+    margin-right: 10px;
+}
+
+.input-bottom button {
+    color: white;
+    border: none;
+    font-size: 15px;
+    background-color: red;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 999px;
 }
 
 main {
-    background-color: gray;
+    background-color: #676767;
+    min-height: calc(100vh - 100px);
 }
 
 .container {

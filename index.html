@@ -36,46 +36,57 @@
                 </div>
     
                 <div class="input-bottom">
-                    <input v-model="inputBar" @keyup.enter="inputSearchResult" type="text" placeholder="Inserisci testo">
+                    <input 
+                        v-model="inputBar"
+                        @keyup.enter="inputSearchResult"
+                        @keyup="inputSearchResult"
+                        type="text" placeholder="Inserisci film"
+                    >
                     <button @click="inputSearchResult">Cerca</button>
                 </div>
             </header>
     
             <main>
                 <div class="container">
-    
-                    <div>
-                        <div class="inner-container">
-                            <div v-for="movie in movieArray" class="single-movie">
-                                <div class="poster-movie">
-                                    <img v-if="movie.poster_path" class="poster" :src="'https://image.tmdb.org/t/p/w300' + movie.poster_path" alt="movie.name">
 
-                                    <ul class="movie-list">
-                                        <li>
-                                            <span class="strong">Titolo:</span>
-                                            <span>{{movie.title}}</span>
-                                        </li>
-            
-                                        <li>
-                                            <span class="strong">Titolo Originale:</span>
-                                            <span>{{movie.original_title}}</span>
-                                        </li>
-            
-                                        <li>
-                                            <span class="strong">Voto:</span>
-                                            <span>{{movie.vote_average}}</span>
-                                        </li>
-            
-                                        <li>
-                                            <span class="strong">Overview:</span>
-                                            <span>{{movie.overview}}</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                    <div class="inner-container">
+                        <div v-for="movie in movieArray" class="single-movie">
+                            <div class="poster-movie">
+                                <img
+                                    v-if="movie.poster_path"
+                                    class="poster"
+                                    :src="'https://image.tmdb.org/t/p/w300' + movie.poster_path"
+                                    alt="movie.name"
+                                >
+
+                                <ul class="movie-list">
+                                    <li>
+                                        <span class="strong">Titolo:</span>
+                                        <span>{{movie.title}}</span>
+                                    </li>
+        
+                                    <li>
+                                        <span class="strong">Titolo Originale:</span>
+                                        <span>{{movie.original_title}}</span>
+                                    </li>
+        
+                                    <li>
+                                        <span class="strong">Voto:</span>
+                                        <span>
+                                            <i class="fas fa-star"></i>
+                                            {{movie.vote_average}}
+                                        </span>
+                                    </li>
+        
+                                    <li>
+                                        <span class="strong">Lingua:</span>
+                                        <span>{{movie.original_language}}</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </main>
         </div>
