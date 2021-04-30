@@ -10,10 +10,20 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.input-bottom {
-    background-color: darkblue;
-    /* test */
+.wrapper {
+    height: 100vh;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
     height: 100px;
+}
+
+.logo {
+    color: red;
 }
 
 main {
@@ -27,17 +37,46 @@ main {
 
 .inner-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     height: 100%;
     padding: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-ul {
+.single-movie img{
+    width: calc(100% / 1);
+}
+
+.poster-movie {
+    position: relative;
+    margin: 20px 0;
+}
+
+.movie-list {
     list-style-type: none;
     padding: 20px;
+    background-color: black;
+    border: 1px solid white;
+    height: 450px;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
 }
 
-img {
-    /* test */
-    display: none;
+.poster-movie:hover .movie-list {
+    display: block;
+}
+
+
+li {
+    color: grey;
+}
+
+.strong {
+    color: white;
 }
