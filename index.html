@@ -55,7 +55,7 @@
                                 <img
                                     v-if="movie.poster_path"
                                     class="poster"
-                                    :src="'https://image.tmdb.org/t/p/w300' + movie.poster_path"
+                                    :src="'https://image.tmdb.org/t/p/w342' + movie.poster_path"
                                     alt="movie.name"
                                 >
 
@@ -72,9 +72,9 @@
         
                                     <li>
                                         <span class="strong">Voto:</span>
-                                        <span>
+                                        <span v-if="movie.vote_average == 0">Nessun Voto</span>
+                                        <span class="stelle" v-else v-for="numero in roundedVote(movie.vote_average)">
                                             <i class="fas fa-star"></i>
-                                            {{movie.vote_average}}
                                         </span>
                                     </li>
         
