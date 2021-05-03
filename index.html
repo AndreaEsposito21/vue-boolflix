@@ -80,7 +80,13 @@
         
                                     <li>
                                         <span class="strong">Lingua:</span>
-                                        <span>{{movie.original_language}}</span>
+                                        <span class="flag-img">
+                                            <img 
+                                                class="flag-language" 
+                                                :src="'img/' + movie.original_language + '.png'" 
+                                                alt="original-language"
+                                            >
+                                        </span>
                                     </li>
                                 </ul>
                             </div>

@@ -97,6 +97,7 @@ main {
 
 li {
     color: grey;
+    margin: 10px 0;
 }
 
 .strong {
@@ -105,4 +106,9 @@ li {
 
 .stelle {
     color: gold;
+}
+
+.flag-img .flag-language {
+    width: 10%;
+    vertical-align: middle;
 }
